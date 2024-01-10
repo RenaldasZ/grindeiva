@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Your Website Title{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'webapp/css/style.css' %}">
+    
+</head>
+<body>
+    <header>
+        <nav>
+        <ul>
+            <li><a href="#">Apie mus</a></li>
+            <li><a href="#">Skaičiuoklė</a></li>
+            <li><a href="#">Galerija</a></li>
+            <li><a href="#">Kontaktai</a></li>
+        </ul>
+        </nav>
+    </header>
+    <main>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        
+        {% block content %}
+        
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; {% now "Y" %} MB Grindeiva</p>
+        <!-- Add footer content here -->
+    </footer>
+    <!-- Add your JavaScript and other script includes here -->
+</body>
+</html>
