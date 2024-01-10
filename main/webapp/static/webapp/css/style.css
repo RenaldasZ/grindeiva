@@ -1,3 +1,36 @@
-.bg {
-background-color: blue;
+body {
+    margin: 0;
+}
+
+header {
+    background-image: url("/static/webapp/images/header.jpg");
+    background-position: center center; /* Center the image horizontally and vertically */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Cover the entire area of the body, cropping when necessary */
+    height: 40vh; /* Set a fixed height for the body */
+}
+
+/* Remove default list styling */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove padding and margin from list items and display them inline */
+nav li {
+    display: inline-block;
+    margin-right: 20px; /* Add some space between the menu items */
+}
+
+/* Style the navigation links */
+nav a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Add a hover effect to the links */
+nav a:hover {
+    color: #e4e4e4;
 }
