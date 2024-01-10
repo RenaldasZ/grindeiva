@@ -46,7 +46,7 @@ class ContactsView(FormView):
         except BadHeaderError:
             return HttpResponse("Invalid header found.")
 
-        return HttpResponseRedirect('')
+        return HttpResponseRedirect(self.success_url)
     
     def form_invalid(self, form):
         response = super().form_invalid(form)
