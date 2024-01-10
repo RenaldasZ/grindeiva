@@ -11,12 +11,12 @@
 <body>
     <header>
         <nav>
-        <ul>
-            <li><a href="#">Apie mus</a></li>
-            <li><a href="#">Skaičiuoklė</a></li>
-            <li><a href="#">Galerija</a></li>
-            <li><a href="#">Kontaktai</a></li>
-        </ul>
+            <ul>
+                <li><a href="{% url "index" %}">Apie mus</a></li>
+                <li><a href="{% url "calculator" %}">Skaičiuoklė</a></li>
+                <li><a href="{% url "galery" %}">Galerija</a></li>
+                <li><a href="{% url "contacts" %}">Kontaktai</a></li>
+            </ul>
         </nav>
     </header>
     <main>
