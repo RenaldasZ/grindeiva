@@ -1,0 +1,7 @@
+{% extends "base_email.html" %}
+
+{% block content %}
+    <p>SENDER: {{ full_name }}</p>
+    <p>EMAIL: {{ email }}</p>
+    <p>MESSAGE: {{ question }}</p>
+{% endblock content %}
