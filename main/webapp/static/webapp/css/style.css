@@ -91,11 +91,62 @@ nav a:hover {
     max-height: 100%;
 }
 
+/* CALCULATOR PAGE */
+.calculator-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator-content {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.slider-container {
+    margin-bottom: 20px;
+}
+
+input[type="range"] {
+    width: 80%;
+    margin: 10px 0;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    height: 10px;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #3498db;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+label, output {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.total-cost-container {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #27ae60;
+}
 datalist {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    width: 200px;
+    writing-mode: horizontal-tb;
+    width: 35rem;
   }
   
   option {
@@ -103,7 +154,7 @@ datalist {
   }
   
   input[type="range"] {
-    width: 200px;
+    width: 35rem;
     margin: 0;
   }
   
@@ -112,6 +163,7 @@ datalist {
     max-width: 50vh;
 }
 
+/* END CALCULATOR */
 input[type="text"],
 input[type="email"],
 textarea {
