@@ -1,5 +1,44 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <p>Index kontentas</p>
+    <div class="calculator-wrapper">
+        <div class="calculator-content">
+            <div class="slider-container">
+                <label for="width">Width: </label>
+                <output id="amount-width" name="amount" for="width">0</output><br />
+                <input id="width" type="range" name="width" min="1" max="500" value="1" step="1" oninput="updateValue()" /><br />
+
+                <datalist id="values-width">
+                    <option value="1" label="1"></option>
+                    <option value="100" label="100"></option>
+                    <option value="200" label="200"></option>
+                    <option value="300" label="300"></option>
+                    <option value="400" label="400"></option>
+                    <option value="500" label="500"></option>
+                </datalist>
+            </div>
+            <div class="slider-container">
+                <label for="thickness">thickness: </label>
+                <output id="amount-thickness" name="amount" for="range">0</output><br />
+                <input id="thickness" type="range" name="thickness" min="5" max="40" value="5" step="1" oninput="updateValue()" list="values-thickness" /><br />
+
+                <datalist id="values-thickness">
+                    <option value="5" label="5"></option>
+                    <option value="10" label="10"></option>
+                    <option value="15" label="15"></option>
+                    <option value="20" label="20"></option>
+                    <option value="25" label="25"></option>
+                    <option value="30" label="30"></option>
+                    <option value="35" label="35"></option>
+                    <option value="40" label="40"></option>
+                </datalist>
+            </div>
+
+            <div class="total-cost-container">
+                <label for="totalCost"> Total cost: </label>
+                <output id="totalCost" name="amount" for="width">0</output><br />
+            </div>
+        </div>
+    </div>
+
 {% endblock  %}

@@ -2,7 +2,7 @@ from typing import Any
 from django.conf import settings
 from django.http import HttpRequest
 from django.http.response import HttpResponse, HttpResponseRedirect
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from django.core.mail import BadHeaderError, EmailMessage
 from django.template.loader import get_template
 from django.shortcuts import render
@@ -27,7 +27,7 @@ class ContactsView(FormView):
     form_class = ContactForm
 
     def form_valid(self, form):
-        #TODO: create nice messege, and concat full name and email into it
+        #TODO: create nice message, and concat full name and email into it
         message_template = get_template('email/message.html').render(context={
             "full_name": self.request.POST.get('full_name'),
             "email": self.request.POST.get('email'),
@@ -45,8 +45,7 @@ class ContactsView(FormView):
             msg.send()
         except BadHeaderError:
             return HttpResponse("Invalid header found.")
-
-        return HttpResponseRedirect('')
+        return HttpResponseRedirect(self.success_url)
     
     def form_invalid(self, form):
         response = super().form_invalid(form)

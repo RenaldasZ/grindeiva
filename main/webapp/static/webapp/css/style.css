@@ -1,3 +1,171 @@
-.bg {
-background-color: blue;
+body {
+    margin: 0;
+    background-color: rgb(53, 53, 53);
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 10px;
+    text-align: center;
+}
+
+header {
+    background-image: url("/static/webapp/images/header.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+}
+
+.logo img {
+    border-radius: 50vh;
+    padding: 10vh;
+    max-height: 30vh;
+}
+
+nav ul {
+    background-color: rgba(255, 255, 255, 0.075);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #b8b8b8;
+}
+
+nav a:hover {
+    color: #e7e7e7;
+}
+
+.content-section {
+    min-width: 50vh;
+    max-width: 80vw;
+    margin: -5vh auto;
+    padding: 20px;
+    background-color: #e7e7e7; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+    flex-shrink: 1;
+}
+
+.content-section h1 {
+    font-size: 32px;
+    color: #303030; 
+}
+
+.content-section h2 {
+    font-size: 24px;
+    color: #303030; 
+}
+
+.content-section p {
+    font-size: 16px;
+    color: #555; 
+    line-height: 1.5;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh; 
+    flex-shrink: 1;
+}
+
+/* Additional styling for the embedded video if necessary */
+.container iframe {
+    border: none;
+    overflow: hidden;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* CALCULATOR PAGE */
+.calculator-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator-content {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.slider-container {
+    margin-bottom: 20px;
+}
+
+input[type="range"] {
+    width: 80%;
+    margin: 10px 0;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    height: 10px;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #3498db;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+label, output {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.total-cost-container {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #27ae60;
+}
+datalist {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    writing-mode: horizontal-tb;
+    width: 35rem;
+  }
+  
+  option {
+    padding: 0;
+  }
+  
+  input[type="range"] {
+    width: 35rem;
+    margin: 0;
+  }
+  
+.contact-form {
+    text-align: right;
+    max-width: 50vh;
+}
+
+/* END CALCULATOR */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: auto;
 }
