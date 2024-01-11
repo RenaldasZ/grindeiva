@@ -83,13 +83,12 @@ nav a:hover {
     max-height: 100%;
 }
 
-
-
 datalist {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    width: 200px;
+    writing-mode: horizontal-tb;
+    width: 30rem;
   }
   
   option {
@@ -97,7 +96,7 @@ datalist {
   }
   
   input[type="range"] {
-    width: 200px;
+    width: 30rem;
     margin: 0;
   }
   
