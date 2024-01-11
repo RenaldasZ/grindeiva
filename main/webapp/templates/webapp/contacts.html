@@ -1,9 +1,44 @@
 {% extends "base.html" %}
 
 {% block content %}
-<form method="POST" action="">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit">
-</form>
+<div class="content-section">
+    <h1>Susisiekite su mumis!</h1>
+    <p>Su mumis galite susisiekti telefonu arba išsiųsti užpildytą formą tiesiog iš mūsų svetainės.</p>
+    <div class="container">
+        <div>
+            <h2>Kontaktai</h2>
+            <p>Grindų betonavimas: GRINDEIVA</p>
+            <p>Tel. nr. : (8-602) 28426</p>
+            <p>Adresas: Šiauliai, Šiaulių apskritis</p>
+        </div>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <div>
+                <h1>Turite klausimų ?</h1>
+                <p>Parašykite mums</p>
+                <div class="contact-form">
+                    <div class="row">
+                        <div class="col">
+                            <label for="{{ form.subject.id_for_label }}">Tema:</label>
+                            {{ form.subject }}
+                        </div>
+                        <div class="col">
+                            <label for="{{ form.full_name.id_for_label }}">Vardas/Įmonė:</label>
+                            {{ form.full_name }}
+                        </div>
+                        <div class="col">
+                            <label for="{{ form.email.id_for_label }}">El.Paštas:</label>
+                            {{ form.email }}
+                        </div>
+                        <div class="col">
+                            <label for="{{ form.question.id_for_label }}">Klausimas:</label>
+                            {{ form.question }}
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</div>
 {% endblock content %}
