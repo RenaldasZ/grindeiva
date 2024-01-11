@@ -7,7 +7,7 @@ from django.core.mail import BadHeaderError, EmailMessage
 from django.template.loader import get_template
 from django.shortcuts import render
 from django.views.generic import TemplateView, FormView
-from . forms import ContactForm, CalculatorForm
+from . forms import ContactForm
 
 class Index(TemplateView):
     template_name = "webapp/index.html"
