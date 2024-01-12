@@ -48,8 +48,7 @@ nav a:hover {
 }
 
 .content-section {
-    min-width: 50vh;
-    max-width: 80vw;
+    max-width: 60vw;
     margin: -5vh auto;
     padding: 20px;
     background-color: #e7e7e7; 
@@ -147,16 +146,16 @@ datalist {
     justify-content: space-between;
     writing-mode: horizontal-tb;
     width: 35rem;
-  }
+}
   
-  option {
+option {
     padding: 0;
-  }
+}
   
-  input[type="range"] {
+input[type="range"] {
     width: 35rem;
     margin: 0;
-  }
+}
   
 .contact-form {
     text-align: right;
@@ -168,4 +167,14 @@ input[type="text"],
 input[type="email"],
 textarea {
     width: auto;
+}
+
+header nav.main .burger {
+    display: none;
+    margin: 0;
+    padding: 0.5rem; 
+}
+
+.top-level-menu {
+    width: 100%;
 }
