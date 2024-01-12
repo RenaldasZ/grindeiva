@@ -1,0 +1,32 @@
+@media screen and (max-width: 768px) {
+    .main-container {
+        margin: 0;
+        width: 100%; /* Set to 100% to take up the full width */
+        padding: 1rem; /* Add padding for better spacing */
+    }
+
+    header nav.main .top-level-menu {
+        display: none;
+    }
+    header nav.main .burger {
+        width: auto;
+        display: inline-block;
+        position: fixed;
+        right: 0;
+    }
+    header nav.main .top-level-menu .spacer {
+        display: none;
+    }
+    header nav.main .top-level-menu.active {
+        display: flex;
+        position: absolute;
+        top: 5vh;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.171);
+        flex-direction: column;
+        width: 100%;
+    }
+    .content-section {
+        align-items: end;
+    }
+}
