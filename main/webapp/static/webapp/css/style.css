@@ -64,7 +64,7 @@ nav a:hover {
 }
 
 .content-section {
-    max-width: 60%;
+    width: 60%;
     margin: -5vh auto;
     padding: 20px;
     background-color: #e7e7e7;
@@ -124,6 +124,11 @@ nav a:hover {
     text-align: left;
     padding-left: 5vw;
     padding-right: 5vw;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 /* Additional styling for the embedded video if necessary */
@@ -199,11 +204,6 @@ option {
 input[type="range"] {
     width: 35rem;
     margin: 0;
-}
-  
-.contact-form {
-    text-align: right;
-    max-width: 50vh;
 }
 
 /* END CALCULATOR */
