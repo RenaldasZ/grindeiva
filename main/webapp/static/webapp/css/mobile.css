@@ -18,6 +18,6 @@
         width: 100%;
     }
     .content-section {
-        align-items: end;
+        max-width: 100%;
     }
 }
