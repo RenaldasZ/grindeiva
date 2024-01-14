@@ -16,11 +16,25 @@ function updateValue() {
     cost.textContent = calculation;
 }
 
-async function active_button(obj_id) {
-    const uncollapsible = document.getElementById(obj_id);
+const uncollapsible = document.querySelector("#top-level-menu");
+const burgerBtn = document.querySelector("#burger-button");
+const wholePage = document;
+
+burgerBtn.addEventListener("click", active_button);
+
+function active_button() {
     if (uncollapsible.classList.contains("active")) {
         uncollapsible.classList.remove("active");
     } else {
         uncollapsible.classList.add("active");
-    };
-};
+    }
+}
+
+wholePage.addEventListener("click", (event) => {
+    const isInsideBurger = uncollapsible.contains(event.target) || burgerBtn.contains(event.target);
+
+    if (!isInsideBurger && uncollapsible.classList.contains("active")) {
+        uncollapsible.classList.remove("active");
+    }
+});
+
