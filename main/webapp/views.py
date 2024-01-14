@@ -56,11 +56,14 @@ def calculate_preliminary_price(area_m2, thickness_cm):
     extra_charge_per_cm = 0.20  # Extra charge per square meter if thickness is over 5 cm
 
     if thickness_cm > 5:
-        total_price = area_m2 * (base_price_per_m2 + extra_charge_per_cm)
+        excess_thickness = thickness_cm - 5
+        total_price = area_m2 * (base_price_per_m2 + excess_thickness * extra_charge_per_cm)
     else:
         total_price = area_m2 * base_price_per_m2
 
+    print(total_price)
     return total_price
+
 
 def price_calculator(request):
     if request.method == 'POST':
