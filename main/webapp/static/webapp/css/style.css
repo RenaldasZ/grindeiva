@@ -4,9 +4,12 @@ body {
 }
 
 footer {
-    background-color: #f8f8f8;
-    padding: 10px;
+    position: static;
+    bottom: 0;
+    background-color: #242424;
     text-align: center;
+    color: #999999;
+    padding: 5vh;
 }
 
 header {
@@ -19,8 +22,14 @@ header {
 
 .logo img {
     border-radius: 50vh;
-    padding: 10vh;
+    padding: 8vh;
     max-height: 30vh;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav ul {
@@ -47,40 +56,79 @@ nav a:hover {
     color: #e7e7e7;
 }
 
+.parent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2vh;
+}
+
 .content-section {
-    min-width: 50vh;
-    max-width: 80vw;
+    width: 60%;
     margin: -5vh auto;
     padding: 20px;
-    background-color: #e7e7e7; 
+    background-color: #e7e7e7;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    flex-shrink: 1;
 }
 
+/* Bendras stilius */
+.content-section {
+    color: #555;
+}
+
+/* Antraštės stiliai */
 .content-section h1 {
-    font-size: 32px;
-    color: #303030; 
+    font-size: 2.125rem;
 }
-
 .content-section h2 {
-    font-size: 24px;
-    color: #303030; 
+    font-size: 1.875rem;
+}
+.content-section h3 {
+    padding-bottom: 2%;
+    font-size: 1.5rem;
+}
+.content-section h4 {
+    font-size: 1.25rem;
 }
 
-.content-section p {
+/* sąrašų stiliai */
+.content-section ul {
     font-size: 16px;
-    color: #555; 
-    line-height: 1.5;
+    line-height: 1.2;
+}
+
+/* Papildomi stiliai */
+.content-section p {
+    color: #555;
+    align-content: justify;
+}
+.content-section ul {
+    list-style: none;
+}
+.content-section hr {
+    max-width: 0;
+    margin: 0 auto;
+    border: none;
+    border-top: 1px solid #555;
+    animation: stretchHR 1s forwards;
+}
+@keyframes stretchHR {
+    to {
+        max-width: 50%;
+    }
 }
 
 .main-container {
+    text-align: left;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.contact-container {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 50vh; 
-    flex-shrink: 1;
+    justify-content: space-evenly;
 }
 
 /* Additional styling for the embedded video if necessary */
@@ -147,20 +195,15 @@ datalist {
     justify-content: space-between;
     writing-mode: horizontal-tb;
     width: 35rem;
-  }
+}
   
-  option {
+option {
     padding: 0;
-  }
+}
   
-  input[type="range"] {
+input[type="range"] {
     width: 35rem;
     margin: 0;
-  }
-  
-.contact-form {
-    text-align: right;
-    max-width: 50vh;
 }
 
 /* END CALCULATOR */
@@ -169,3 +212,65 @@ input[type="email"],
 textarea {
     width: auto;
 }
+
+header nav.main .burger {
+    display: none;
+    margin: 0;
+    padding: 0.5rem; 
+}
+
+.top-level-menu {
+    width: 100%;
+}
+
+/* GALERY STYLE */
+.job-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.job-section {
+    background-color: #ffffff;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.job-section:hover {
+    transform: translateY(-5px);
+}
+
+.job-title {
+    color: #333333;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.job-description {
+    color: #555555;
+    line-height: 1.4;
+}
+
+.image-container {
+    margin-top: 15px;
+}
+
+.job-image {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.job-image:hover {
+    transform: scale(1.1);
+}
+
+/* END GALERY STYLE */
