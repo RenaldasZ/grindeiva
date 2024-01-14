@@ -20,4 +20,21 @@
     .content-section {
         width: 100%;
     }
+
+    .list-item {
+        width: 100vw;
+        border: 1px solid black;
+    }
+    
+    .list-link {
+        display: block;
+        width: 100%;    
+        text-decoration: none; 
+        color: black;  
+    }
+    
+    .list-item:hover {
+        background-color: red;
+    }
 }
+

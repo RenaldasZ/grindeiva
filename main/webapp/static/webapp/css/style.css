@@ -42,14 +42,13 @@ nav ul {
 
 nav li {
     display: inline-block;
-    margin-right: 20px;
-    padding: 20px;
 }
 
 nav a {
     text-decoration: none;
     font-size: 18px;
-    color: #b8b8b8;
+    color: #b8b8b8;   
+    padding: 20px 0;
 }
 
 nav a:hover {
@@ -221,4 +220,10 @@ header nav.main .burger {
 
 .top-level-menu {
     width: 100%;
+}
+
+@media screen and (min-width: 768px) { 
+    nav li {
+        padding: 20px;
+    }
 }
