@@ -6,20 +6,19 @@ from django.urls import reverse_lazy, reverse
 from django.core.mail import BadHeaderError, EmailMessage
 from django.template.loader import get_template
 from django.shortcuts import render
-from django.views.generic import TemplateView, FormView
+from django.views.generic import TemplateView, FormView, ListView
 from . forms import ContactForm
+from . models import JobModel
 
 class Index(TemplateView):
     template_name = "webapp/index.html"
 
-    def get(self, request: HttpRequest, *args: Any, **kwargs: Any) -> HttpResponse:
-        return super().get(request, *args, **kwargs)
-
 class CalculatorView(TemplateView):
     template_name = "webapp/calculator.html"
 
-class GaleryView(TemplateView):
+class GaleryView(ListView):
     template_name = "webapp/galery.html"
+    model = JobModel
 
 class ContactsView(FormView):
     template_name = "webapp/contacts.html"
