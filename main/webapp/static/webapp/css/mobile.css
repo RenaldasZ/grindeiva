@@ -3,34 +3,62 @@
     header nav.main .top-level-menu {
         display: none;
     }
+
     header nav.main .burger {
         display: inline-block;
         position: absolute;
         right: 0;
     }
+
     header nav.main .top-level-menu.active {
         display: flex;
         position: absolute;
         top: 6vh;
         height: auto;
-        background-color: rgba(255, 255, 255, 0.171);
+        background-color: rgba(36, 36, 36, 0.603);
         flex-direction: column;
         width: 100%;
+
+        animation: myothermove 3s;
     }
+
+    @keyframes myothermove {
+        0% {
+            opacity: 1;
+            background-color: rgb(27, 27, 27);
+        }
+        50% {
+            opacity: 0.8;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
     .content-section {
-        width: 100%;
+        width: auto;
+    }
+
+    .main-container {
+        margin-left: -2vh;
+    }
+
+    .contact-container {
+        display: grid;
     }
 
     .list-item {
         width: 100vw;
-        border: 1px solid rgba(83, 83, 83, 0.089);
+        border: 1px solid #e7e7e710;
     }
     
     .list-link {
-        display: block;
+        display: flex;
+        justify-content: center;
         width: 100%;    
         text-decoration: none; 
-        color: rgb(22, 22, 22);  
+        color: rgb(255, 255, 255); 
+        font-size: larger;
     }
     
     .list-item:hover {
