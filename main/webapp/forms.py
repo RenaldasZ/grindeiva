@@ -8,3 +8,8 @@ class ContactForm(forms.Form):
 
     class Meta:
         fields = ('subject', 'full_name', 'email', 'question')
+
+
+class PriceCalculatorForm(forms.Form):
+    plotas = forms.FloatField(label='Plotas (m2)')
+    storis = forms.FloatField(label='Storis (cm)')

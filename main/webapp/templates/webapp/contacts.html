@@ -19,29 +19,27 @@
                         {% csrf_token %}
                         <h3>Turite klausimų ?</h3>
                         <p>Parašykite mums</p>
-                            <div class="row">
-                                <div class="col">
-                                    <label for="{{ form.subject.id_for_label }}">Tema:</label>
-                                    {{ form.subject }}
-                                </div>
-                                <div class="col">
-                                    <label for="{{ form.full_name.id_for_label }}">Vardas/Įmonė:</label>
-                                    {{ form.full_name }}
-                                </div>
-                                <div class="col">
-                                    <label for="{{ form.email.id_for_label }}">El.Paštas:</label>
-                                    {{ form.email }}
-                                </div>
-                                <div class="col">
-                                    <label for="{{ form.question.id_for_label }}">Klausimas:</label>
-                                    {{ form.question }}
-                                </div>
-                            </div>
+                        <div class="form-row">
+                            <label for="{{ form.subject.id_for_label }}">Tema:</label>
+                            {{ form.subject }}
+                        </div>
+                        <div class="form-row">
+                            <label for="{{ form.full_name.id_for_label }}">Vardas/Įmonė:</label>
+                            {{ form.full_name }}
+                        </div>
+                        <div class="form-row">
+                            <label for="{{ form.email.id_for_label }}">El.Paštas:</label>
+                            {{ form.email }}
+                        </div>
+                        <div class="form-row">
+                            <label for="{{ form.question.id_for_label }}">Klausimas:</label>
+                            {{ form.question }}
+                        </div>
                         <input type="submit" value="Submit">
                     </form>
                 </div>
             </div>
-        </div>    
+        </div>
     </div>
 </div>
 {% endblock content %}
