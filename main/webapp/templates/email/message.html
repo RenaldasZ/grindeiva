@@ -1,7 +1,11 @@
 {% extends "base_email.html" %}
 
+{% block title %}
+    <h1>{{ subject }}</h1>
+{% endblock title %}
+
 {% block content %}
-    <p>SENDER: {{ full_name }}</p>
-    <p>EMAIL: {{ email }}</p>
-    <p>MESSAGE: {{ question }}</p>
+    <p>Siuntėjas(Vardas/imonė): {{ full_name }}</p>
+    <p>Siuntėjo El.paštas: {{ email }}</p>
+    <p>Siuntėjo žinutė: {{ question }}</p>
 {% endblock content %}

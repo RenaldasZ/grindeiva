@@ -1,92 +1,99 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            .body {
-                font-family: sans-serif;
-                background: linear-gradient(
-                    180deg, rgba(0, 0, 0, 0.92) 0%, 
-                    rgba(4, 4, 0, 0.88) 83.21%, 
-                    rgba(4, 3, 0, 0.69) 93.45%, 
-                    rgba(14, 7, 0, 0.46) 100%
-                );
-                padding-top: 5%;
-                width: 40vw;
-            }
-            @media only screen and (max-width: 1081px) {
-                .body {
-                    width: 100vw;
-                }
-            }
-            .container {
-                margin: auto;
-                text-align: center;
-                background: rgba(255, 248, 248, 0.91);
-                border-radius: 40px 40px 0px 0px;
-                border-top: 4px solid gold;
-                width: 80%;
-            }
-            .main {
-                text-align: left;
-                padding: 1rem;
-                margin-top: 1rem;
-                font-size: medium;
-                color: black;
-            }
-            .footer {
-                display: flex;
-                width: 100%;
-                text-align: left;
-                margin: 2rem 0 0 0;
-                background-color: #CDCBCB;
-            }
-            .footer-text {
-                width: 60%;
-                border-right: 2px solid black;  
-            }
-            .footer-text p {
-                padding: 0 1rem;
-            }
-            .footer-buttons {
-                margin-left: 2rem;
-                margin-top: 2rem;
-            }
-        </style>
-    </head>
-    <body class="body">
-        <div class="container">
-            {% block image %}
-            {% endblock image %}
-            <div class="main">
-                {% block title %}
-                {% endblock title %}    
-                {% block content %}
-                {% endblock content %}
-            </div>
-            <div class="footer">
-                <div class="footer-text">
-                    
-                </div>
-                <div class="footer-buttons">
-                    <a href="https://www.youtube.com/">
-                        <img style="width: 48px;
-                                    height: 48px;"
-                                    src="https://cdn-icons-png.flaticon.com/128/174/174883.png"
-                                    alt="Logo" title="Youtube" style="display:block"></a>
-                    <a href="https://www.linkedin.com/">
-                        <img style="width: 48px;
-                                    height: 48px;"
-                                    src="https://cdn-icons-png.flaticon.com/128/3536/3536505.png"
-                                    alt="Logo" title="LinkedIn" style="display:block"></a>
-                    <a href="https://twitter.com/">
-                        <img style="width: 48px;
-                                    height: 48px;"
-                                    src="https://cdn-icons-png.flaticon.com/128/733/733579.png"
-                                    alt="Logo" title="Twitter" style="display:block"></a>
-                </div>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nauja žinutė iš kliento per (Grindeiva.lt)</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #333;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .main {
+            padding: 20px;
+            background: #ffffff;
+        }
+
+        .main h1 {
+            color: #333;
+        }
+
+        .main p {
+            font-size: 16px;
+            line-height: 1.6em;
+            color: #666;
+        }
+
+        .footer {
+            background: #333;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .social-icons img {
+            width: 32px;
+            height: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Grindeiva Pašto Karvelis</h1>
+        </header>
+        <div class="main">
+            {% block title %}{% endblock title %}
+            {% block content %}{% endblock content %}
+        </div>
+        <div class="footer">
+            <p>Additional information or footer text can be placed here.</p>
+            <div class="social-icons">
+                <a href="https://www.youtube.com/"><img src="https://cdn-icons-png.flaticon.com/128/174/174883.png" alt="YouTube"></a>
+                <a href="https://www.linkedin.com/"><img src="https://cdn-icons-png.flaticon.com/128/3536/3536505.png" alt="LinkedIn"></a>
+                <a href="https://twitter.com/"><img src="https://cdn-icons-png.flaticon.com/128/733/733579.png" alt="Twitter"></a>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

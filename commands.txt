@@ -1,0 +1,15 @@
+# tutorial
+https://pylessons.com/django-deployment
+
+# To restart gunicorn
+sudo systemctl restart gunicorn
+
+# To restart nginx
+sudo systemctl restart nginx
+sudo nginx -s reload
+
+# To generate new SSL key 
+sudo certbot renew --dry-run
+
+# Letencrypt logs
+/var/log/letsencrypt/letsencrypt.log
