@@ -1,8 +1,17 @@
 function handleImage(selectedImage) {
-    if (selectedImage.classList.contains("active")){
-        selectedImage.classList.remove("active"); 
+    const galleryItems = document.querySelectorAll('.job-image');
+    const overlay = document.querySelector('.overlay');
+
+    if (selectedImage.classList.contains("active")) {
+        selectedImage.classList.remove("active");
+        document.body.style.overflow = 'auto';
+        overlay.style.display = 'none';
     } else {
-        selectedImage.classList += " active";
+        galleryItems.forEach(item => item.classList.remove('active'));
+        selectedImage.classList.add("active");
+
+        document.body.style.overflow = 'hidden';
+        overlay.style.display = 'block';
     }
 }
 
