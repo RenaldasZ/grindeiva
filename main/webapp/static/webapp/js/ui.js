@@ -7,15 +7,23 @@ function handleImage(selectedImage) {
 }
 
 function updateValue() {
-    const width = document.getElementById("width").value;
-    const thickness = document.getElementById("thickness").value;
+    const base_price_per_m2 = 4.5;
+    const extra_charge_per_cm = 0.20;
+
+    const area_m2 = parseFloat(document.getElementById("area_m2").value);
+    const thickness = parseFloat(document.getElementById("thickness").value);
+
+    if (isNaN(area_m2) || isNaN(thickness)) {
+        // Handle invalid input, e.g., show an error message
+        return;
+    }
 
     const widthAmount = document.getElementById("amount-width");
     const thicknessAmount = document.getElementById("amount-thickness");
 
-    widthAmount.textContent = width;
+    widthAmount.textContent = area_m2;
     thicknessAmount.textContent = thickness;
-    
+
     const cost = document.getElementById("totalCost");
 
     if (thickness > 5) {
@@ -27,7 +35,6 @@ function updateValue() {
         cost.textContent = total_price.toFixed(2); // Rounds to 2 decimal places
     }
 }
-
 
 const uncollapsible = document.querySelector("#top-level-menu");
 const burgerBtn = document.querySelector("#burger-button");
