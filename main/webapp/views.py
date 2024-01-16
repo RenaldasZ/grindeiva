@@ -19,6 +19,7 @@ class CalculatorView(TemplateView):
 class GaleryView(ListView):
     template_name = "webapp/galery.html"
     model = JobModel
+    context_object_name = 'object_list'
 
 class ContactsView(FormView):
     template_name = "webapp/contacts.html"

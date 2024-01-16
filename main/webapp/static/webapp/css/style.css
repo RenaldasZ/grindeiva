@@ -229,8 +229,8 @@ header nav.main .burger {
 /* GALERY STYLE */
 .job-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .job-section {
@@ -240,7 +240,6 @@ header nav.main .burger {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 15px;
     padding: 20px;
-    width: 300px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -260,22 +259,31 @@ header nav.main .burger {
 }
 
 .image-container {
+    display: flex;
+    flex-direction: row;
     margin-top: 15px;
+    flex-wrap: wrap;
 }
 
 .job-image {
-    border-radius: 8px;
+    margin: 1px;
+    border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: block;
-    max-width: 100%;
-    height: auto;
+    max-width: 20vw;
+    max-height: 20vh;
     transition: transform 0.3s ease-in-out;
+    border: 1px solid rgb(255, 255, 255); 
+    box-sizing: border-box;
 }
 
 .job-image:hover {
     transform: scale(1.1);
 }
 
+.job-image.active {
+    transform: scale(4);
+}
 /* END GALERY STYLE */
 
 @media screen and (min-width: 768px) { 

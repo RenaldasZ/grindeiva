@@ -1,4 +1,10 @@
-
+function handleImage(selectedImage) {
+    if (selectedImage.classList.contains("active")){
+        selectedImage.classList.remove("active"); 
+    } else {
+        selectedImage.classList += " active";
+    }
+}
 
 function updateValue() {
     const width = document.getElementById("width").value;
@@ -11,10 +17,17 @@ function updateValue() {
     thicknessAmount.textContent = thickness;
     
     const cost = document.getElementById("totalCost");
-    // Total cubic yard = >(Length * Width * (Depth / 12)) / 27
-    let calculation = (width * (thickness / 12))/ 27;
-    cost.textContent = calculation;
+
+    if (thickness > 5) {
+        const excess_thickness = thickness - 5;
+        let total_price = area_m2 * (base_price_per_m2 + excess_thickness * extra_charge_per_cm);
+        cost.textContent = total_price.toFixed(2); // Rounds to 2 decimal places
+    } else {
+        let total_price = area_m2 * base_price_per_m2;
+        cost.textContent = total_price.toFixed(2); // Rounds to 2 decimal places
+    }
 }
+
 
 const uncollapsible = document.querySelector("#top-level-menu");
 const burgerBtn = document.querySelector("#burger-button");

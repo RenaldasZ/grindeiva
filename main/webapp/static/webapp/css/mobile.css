@@ -36,7 +36,7 @@
     }
 
     .content-section {
-        width: auto;
+        width: 100%;
     }
 
     .main-container {
@@ -64,5 +64,19 @@
     .list-item:hover {
         background-color: rgba(184, 184, 184, 0.349);
     }
-}
 
+    .calculator-content {
+        width: 90%;
+        padding: 10px;
+    }
+    input[type="range"] {
+        width: 100%;
+    }
+    datalist {
+        width: 100%;
+    }
+
+    .job-container {
+        width: 100%;
+    }
+}
