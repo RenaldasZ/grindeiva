@@ -36,7 +36,7 @@
     }
 
     .content-section {
-        width: auto;
+        width: 100%;
     }
 
     .main-container {
@@ -71,6 +71,9 @@
         width: 100%;
     }
     datalist {
+        width: 100%;
+    }
+    .job-container {
         width: 100%;
     }
 }

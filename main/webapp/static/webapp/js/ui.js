@@ -1,4 +1,10 @@
-
+function handleImage(selectedImage) {
+    if (selectedImage.classList.contains("active")){
+        selectedImage.classList.remove("active"); 
+    } else {
+        selectedImage.classList += " active";
+    }
+}
 
 function updateValue() {
     const base_price_per_m2 = 4.5;
@@ -30,16 +36,6 @@ function updateValue() {
     }
 }
 
-/*
-    if thickness_cm > 5:
-        excess_thickness = thickness_cm - 5
-        total_price = area_m2 * (base_price_per_m2 + excess_thickness * extra_charge_per_cm)
-    else:
-        total_price = area_m2 * base_price_per_m2
-
-    print(total_price)
-    return total_price
-*/
 const uncollapsible = document.querySelector("#top-level-menu");
 const burgerBtn = document.querySelector("#burger-button");
 const wholePage = document;

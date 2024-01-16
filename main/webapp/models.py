@@ -8,9 +8,11 @@ class JobModel(models.Model):
     def __str__(self) -> str:
         return f'{self.job_title}'
     
+
 class JobImage(models.Model):
     image = models.ImageField(upload_to='uploads/')
     job = models.ForeignKey(JobModel, on_delete=models.CASCADE, related_name="job_images")
 
     def __str__(self):
         return f'{self.job.job_title} image'
+    

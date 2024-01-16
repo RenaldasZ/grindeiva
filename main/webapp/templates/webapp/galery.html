@@ -1,29 +1,26 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-
-
-
-
-
 <div class="parent-container">
     <div class="content-section">
         <h1>Galerija</h1>
         <hr>
+        <h4>Peržvelkite mūsų projektų nuotraukas ir atraskite įvairių stilių bei sprendimų pasirinkimą. Kiekvienas mūsų projektas yra išskirtinis, atspindintis aukštus standartus.</h4>
         <div class="main-container">
             <div class="job-container">
                 {% for item in object_list %}
                     <div class="job-section">
                         <h1 class="job-title">{{ item.job_title }}</h1>
                         <p class="job-description">{{ item.job_description }}</p>
-                        {% for image in item.job_images.all %}
-                            <img class="job-image" alt="" src="{{ image.image.url }}">
-                        {% endfor %}
+                        <div class="image-container">
+                            {% for image in item.job_images.all %}
+                                <img id="job-image" class="job-image" alt="" src="{{ image.image.url }}" onclick="handleImage(this)">
+                            {% endfor %}
+                        </div>
                     </div>
                 {% endfor %}
             </div>
         </div>
     </div>
 </div>
-{% endblock  %}
+{% endblock %}
