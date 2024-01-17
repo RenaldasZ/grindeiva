@@ -11,6 +11,9 @@ from . models import JobModel
 class Index(TemplateView):
     template_name = "webapp/index.html"
 
+class About(TemplateView):
+    template_name = "webapp/about.html"
+
 class CalculatorView(TemplateView):
     template_name = "webapp/calculator.html"
     

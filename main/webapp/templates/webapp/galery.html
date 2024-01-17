@@ -4,11 +4,14 @@
 <div class="overlay"></div>
 <div class="parent-container">
     <div class="content-section">
+        <div class="index-container">
         <h1>Galerija</h1>
         <hr>
-        <h4>Peržvelkite mūsų projektų nuotraukas ir atraskite įvairių stilių bei sprendimų pasirinkimą. Kiekvienas mūsų projektas yra išskirtinis, atspindintis aukštus standartus.</h4>
-        <div class="main-container">
-            <div class="job-container">
+        <ul>
+            <h4>Galerija</h4>
+            <li>Peržvelkite mūsų projektų nuotraukas ir atraskite įvairių stilių bei sprendimų pasirinkimą. Kiekvienas mūsų projektas yra išskirtinis, atspindintis aukštus standartus.</li>
+        </ul>
+        <div class="job-container">
                 {% for item in object_list %}
                     <div class="job-section">
                         <h1 class="job-title">{{ item.job_title }}</h1>
