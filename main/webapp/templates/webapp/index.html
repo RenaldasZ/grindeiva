@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11475359439"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-11475359439');
+</script>
 <div class="parent-container">
     <div class="content-section">
         <div class="index-container">
@@ -8,26 +17,36 @@
         <h4>Sveiki atvykę į “Grindeiva” Grindų betonavimo pasaulį!</h4>
         <hr>
             <ul>
-                <h4>Grindų Paruošimas</h4> 
-                <li>Pasirūpinsime, kad jūsų grindys būtų tinkamai paruoštos naujam betonui - greitai ir švariai.</li>
+                <h4>Grindų Paruošimo Paslaugos</h4> 
+                <li>Gaukite idealiai paruoštą pagrindą. Štai ką mes jums siūlome:</li>
+                <div style="padding-top:2%;">
+                    <li><b>- Smėlio lyginimas</b>: Mes atliekame precizinį smėlio lyginimą, kad užtikrintume tolygę ir stabilią bazę betonui.</li>
+                    <li><b>- Drėgmės izoliacija</b>: Speciali plėvelė yra klojama siekiant apsaugoti grindis nuo galimos drėgmės.</li>
+                    <li><b>- Šilumos efektyvumas</b>: Užtikriname efektyvų polistireno klijavimą šilumos izoliacijai pagerinti.</li>
+                    <li><b>- Armatavimo tvirtumas</b>: Tinklas kruopščiai rišamas, kad betono konstrukcija būtų tvirta ir ilgaamžė.</li>
+                </div>
+
+                <h4>Betoninės Grindys</h4> 
+                <li>Šiuolaikinės ir stilingos betoninės grindys - idealus pasirinkimas tiek jūsų namams, tiek verslo erdvėms.</li> 
+                <li>Mes siūlome įvairias apdailos galimybes, kurios pritaikytos jūsų individualiam stiliui, bei užtikriname ilgaamžiškumą ir atsparumą.</li>
+                
+                <h4>Smėlbetonio Grindys</h4>
+                <li>Idealus pasirinkimas lygioms ir estetiškoms grindims, mūsų smėlbetonio grindys yra atsparios ir lengvai pritaikomos tiek moderniam gyvenamajam interjerui, tiek komercinei aplinkai.</li> 
+                <li>Jos garantuoja greitą įrengimą ir mažai reikalaujančią priežiūrą.</li>
 
                 <h4>Pamatų Įrengimas</h4> 
                 <li>Kokybiški pamatai - jūsų pastato stabilumo ir ilgaamžiškumo garantas. Mes juos įrengsime patikimai ir efektyviai.</li>
-
+                
                 <h4>Betonavimo Darbai</h4> 
                 <li>Patvarios ir estetiškos betoninės grindys, pagamintos su meistriškumu ir atsidavimu.</li>       
                 
-                <h4>Grindų Lyginimas</h4> 
-                <li>Mūsų grindų lyginimo paslauga užtikrina, kad jūsų grindys būtų tobulo lygumo.</li>    
-                       
                 <h4>Betono Lyginimas ir Slifavimas</h4> 
                 <li>Profesionalus betono lyginimas ir slifavimas, skirti nepriekaištingam paviršiui sukurti.</li>       
-
+                
                 <h4>Šildomos Grindys</h4> 
-                <li>Komfortiškas šilumos pojūtis su mūsų įrengtomis šildomomis grindimis - praktiška ir energiją taupanti.</li>   
+                <li>Komfortiškas šilumos pojūtis su mūsų įrengtomis šildomomis grindimis - praktiška ir energiją taupanti.</li><br>   
+                <li>Plačiau skiltyje <a href="{% url "about" %}">Apie mus<a></li>
 
-                <h4>Betoninės Grindys</h4> 
-                <li>Modernios ir lengvai prižiūrimos betoninės grindys jūsų namams ar verslui.</li>
             </ul>
         </div>
     </div>
